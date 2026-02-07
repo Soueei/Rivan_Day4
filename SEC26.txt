@@ -14,7 +14,7 @@
 
 ### Find the Network:
 
-| Dept                 | Network               | Infected Hosts                    |
+| Dept                 | Network(host IP)      | Infected Hosts                    |
 | ---                  | ---                   | ---                               |
 | ADMIN                | 192.168.228.144 /18   | 192.168.228.1   - 192.168.229.254 |
 | HR                   | 192.168.228.144 /21   | 192.168.224.1   - 192.168.231.254 |
@@ -339,7 +339,7 @@ conf t
   switchport access vlan 1
   mls qos trust device cisco-phone
   exit
- !
+ ip routing
  router ospf 1
   router-id 10.21.21.4
   network 10.21.0.0 0.0.255.255 area 0
